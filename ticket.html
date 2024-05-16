@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="Style.css">
+    <script src="
+    https://cdn.jsdelivr.net/npm/sweetalert2@11.7.32/dist/sweetalert2.all.min.js
+    "></script>
+    <link href="
+    https://cdn.jsdelivr.net/npm/sweetalert2@11.7.32/dist/sweetalert2.min.css
+    " rel="stylesheet">
+</head>
+
+<body background="images/bg_5.jpg" style="background-repeat: no-repeat ;width: 100%;">
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top d-flex">
+        <a class="navbar-brand p-2" href="index.html"><img src="Images/Netflix_Logo.png" alt=""
+                style="width: 70px;"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav justify-content-center">
+                <li class="nav-item p-2">
+                    <a class="nav-link" href="#product"><ion-icon name="list-outline"></ion-icon> </a>
+                </li>
+                <li class="nav-item p-2">
+                    <a class="nav-link" href="#"><ion-icon name="call-outline"></ion-icon></a>
+                </li>
+                <li class="nav-item p-2">
+                    <a class="nav-link" href="#"><ion-icon name="help-outline"></ion-icon></a>
+                </li>
+                <li class="nav-item p-2">
+                    <a class="nav-link" href="#"><ion-icon name="person-outline"></ion-icon></a>
+            </ul>
+        </div>
+        <form class="form-inline p-2">
+            <input class="form-control mr-sm-2 small" type="search" placeholder="Search" aria-label="Search"
+                style="background-color: black; font-size: 10px;">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit" style="font-size: 10px;">Search</button>
+        </form>
+        <ul class="navbar-nav justify-content-center">
+            <li class="nav-item p-2">
+                <a class="nav-link" href="FormSignUp.html" style="font-size: 10px;">Sign Up!</a>
+            </li>
+            <li class="nav-item p-2">
+                <a class="nav-link" href="FormLogin.html" style="font-size: 10px;">Sign In!</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="container" style="position: relative;">
+        <form action="" class="formlogin" style="width: 80%; margin-top: 2%; margin-bottom: 2%;">
+            <h3><b>Thông tin liên hệ (nhận vé/phiếu thanh toán)</b></h3>
+            <div class="row">
+                <div class="col-sm 6">
+                    <div class="user-box">
+                        <input type="text" name="" required="">
+                        <label>Họ (vd: Nguyen)</label>
+                    </div>
+                    <div class="user-box">
+                        <input type="password" name="" required="">
+                        <label>Điện thoại di động</label>
+                    </div>
+                </div>
+                <div class="col-sm 6">
+                    <div class="user-box">
+                        <input type="text" name="" required="">
+                        <label>Tên Đệm & Tên (vd: Thi Ngoc Anh)</label>
+                    </div>
+                    <div class="user-box">
+                        <input type="password" name="" required="">
+                        <label>Email</label>
+                    </div>
+                </div>
+            </div>
+            <h3><b>Thông tin vé</b></h3>
+            <div class="user-box">
+                <input type="number" name="" required="">
+                <label>Số Hành Khách</label>
+            </div>
+
+            <div class="row">
+                <div class="col-sm 6">
+                    <div class="form-group">
+                        <label for="my-select">Điểm Khởi Hành</label>
+                        <select id="my-select" class="form-control" name="">
+                            <option>HCM</option>
+                            <option>Hà Nội</option>
+                            <option>Nha Trang</option>
+                            <option>Vũng tàu</option>
+                            <option>Phú quốc</option>
+                            <option>Đà Lạt</option>
+                        </select>
+                    </div>
+
+                </div>
+                <div class="col-sm 6">
+                    <div class="form-group">
+                        <label for="my-select">Điểm đến</label>
+                        <select id="my-select" class="form-control" name="">
+                            <option>HCM</option>
+                            <option>Hà Nội</option>
+                            <option>Nha Trang</option>
+                            <option>Vũng tàu</option>
+                            <option>Phú quốc</option>
+                            <option>Đà Lạt</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Hạng Ghế</label>
+                <select id="my-select" class="form-control" name="">
+                    <option>Tiết Kiệm</option>
+                    <option>Phổ Thông</option>
+                    <option>Cao Cấp</option>
+                    <option>Thượng lưu</option>
+                </select>
+
+            </div>
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <div class="user-box">
+                            <input type="number" name="" required="">
+                            <label>Số người</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <label class="lab-btn">Khứ Hồi
+                        <input class="checkbox-btn" type="checkbox" onclick="javascript:yesnoCheck();" name="yesno"
+                            id="khCheck">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <div class="user-box">
+                            <input type="date" name="" required="" style="text-indent: 30%;">
+                            <label>Ngày đi</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3" id="ifkhYes" style="display:none">
+                    <div class="form-group">
+
+                        <div class="user-box">
+                            <input type="date" name="" required="" style="text-indent: 30%;">
+                            <label>Khứ hồi</label>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <label class="lab-btn">Khách Sạn
+                        <input type="checkbox" onclick="javascript:yesnoCheck();" name="yesno" id="ksCheck">
+                        <span class="checkmark"></span>
+                    </label>
+                    <div id="ifksYes" style="display:none">
+                        <h5>Chi Tiết Khách Sạn</h5>
+                        <label for="my-select">Điểm đến</label>
+                        <select id="my-select" class="form-control" name="">
+                            <option>HCM</option>
+                            <option>Hà Nội</option>
+                            <option>Nha Trang</option>
+                            <option>Vũng tàu</option>
+                            <option>Phú quốc</option>
+                            <option>Đà Lạt</option>
+                        </select>
+                        <div class="user-box">
+                            <input type="date" name="" required="" style="text-indent: 20%;">
+                            <label>Nhận Phòng</label>
+                        </div>
+                        <div class="user-box">
+                            <input type="date" name="" required="" style="text-indent: 20%;">
+                            <label>Trả Phòng</label>
+                        </div>
+                        <label for="">Loại Phòng</label>
+                        <select id="my-select" class="form-control" name="">
+                            <option>Vip</option>
+                            <option>Thường</option>
+                        </select>
+                        <div class="user-box">
+                            <input type="number" name="" required="">
+                            <label>Số người</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <label class="lab-btn">Nhà Hàng
+                        <input class="checkbox-btn" type="checkbox" onclick="javascript:yesnoCheck();" name="yesno"
+                            id="nhCheck">
+                        <span class="checkmark"></span>
+                    </label>
+
+                    <div id="ifnhYes" style="display:none">
+                        <div class="user-box">
+                            <input type="number" name="" required="">
+                            <label>Số người</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button class="btn-hd-w" id="showAlertButton"><b>Lưu</b></button>
+
+        </form>
+    </div>
+    <footer>
+
+        <div class="card  text-center">
+            <div class="row" style="background-color: black;">
+                <div class="card-body col-sm-6">
+                    <h6 class="card-title footer-help"><i>LIÊN HỆ:</i></h6>
+                    <p class="card-text footer-help"><i>Email: nikestore@gmail.com</i></p>
+                    <i class="footer-help">Hotline: 090 909 0909</i>
+                </div>
+                <div class="card-body col-sm-6">
+                    <a class="footer-help" href="">
+                        <h5>GET HELP</h5>
+                    </a>
+                    <a class="footer-help" href="">
+                        <p>Order Status</p>
+                    </a>
+                    <a class="footer-help" href="">
+                        <p>Delivery</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    </div>
+    <script>
+
+        document.getElementById('showAlertButton').addEventListener('click', function () {
+            Swal.fire({
+                title: 'success!',
+                text: 'Thành công!',
+                icon: 'success',
+                confirmButtonText: 'Ok'
+            });
+        });
+        function yesnoCheck() {
+            if (document.getElementById('nhCheck').checked) {
+                document.getElementById('ifnhYes').style.display = 'block';
+            } else {
+                document.getElementById('ifnhYes').style.display = 'none';
+            }
+
+            if (document.getElementById('ksCheck').checked) {
+                document.getElementById('ifksYes').style.display = 'block';
+            } else {
+                document.getElementById('ifksYes').style.display = 'none';
+            }
+            if (document.getElementById('khCheck').checked) {
+                document.getElementById('ifkhYes').style.display = 'block';
+            } else {
+                document.getElementById('ifkhYes').style.display = 'none';
+            }
+        }
+    </script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="Style.css">
+</head>
+
+<body background="images/bg_5.jpg" style="background-repeat: no-repeat ;width: 100%;">
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top d-flex">
+        <a class="navbar-brand p-2" href="index.html"><img src="Images/Netflix_Logo.png" alt=""
+                style="width: 70px;"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav justify-content-center">
+                <li class="nav-item p-2">
+                    <a class="nav-link" href="#product"><ion-icon name="list-outline"></ion-icon> </a>
+                </li>
+                <li class="nav-item p-2">
+                    <a class="nav-link" href="#"><ion-icon name="call-outline"></ion-icon></a>
+                </li>
+                <li class="nav-item p-2">
+                    <a class="nav-link" href="#"><ion-icon name="help-outline"></ion-icon></a>
+                </li>
+                <li class="nav-item p-2">
+                    <a class="nav-link" href="#"><ion-icon name="person-outline"></ion-icon></a>
+            </ul>
+        </div>
+        <form class="form-inline p-2">
+            <input class="form-control mr-sm-2 small" type="search" placeholder="Search" aria-label="Search"
+                style="background-color: black; font-size: 10px;">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit" style="font-size: 10px;">Search</button>
+        </form>
+        <ul class="navbar-nav justify-content-center">
+            <li class="nav-item p-2">
+                <a class="nav-link" href="FormSignUp.html" style="font-size: 10px;">Sign Up!</a>
+            </li>
+            <li class="nav-item p-2">
+                <a class="nav-link" href="FormLogin.html" style="font-size: 10px;">Sign In!</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="container" style="position: relative;">
+        <div class="row"style="background: rgba(0, 0, 0, 0.3);">
+            <div class="col-lg-12">
+                <div class="cart-table" >
+                    <h1 style="text-align: center; margin-top: 1%;;">Giỏ Hàng</h1>
+                    <table class="table table-striped " style= "color: white;">
+                        <thead>
+                            <tr>
+                                <th>Ảnh</th>
+                                <th class="p-name">Tên Sản Phẩm</th>
+                                <th>Giá</th>
+                                <th>Số Lượng</th>
+                                <th>Tổng Tiền</th>
+                                <th><i class="ti-close"></i></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th style="width: 30%;"><img src="images/bg_1.jpg" alt="" style="width: 100%;"></th>
+                                <th class="p-name">Tour đà lạt 2n1d</th>
+                                <th>1800</th>
+                                <th>1</th>
+                                <th>1800</th>
+                                <th><i class="ti-close"></i></th>
+                            </tr>
+                          
+                        </tbody>
+                      </table>
+                </div>
+                
+                        <div class="row">
+                            <div class="col-lg-4">
+
+                                <div class="discount-coupon">
+                                    <h6>Mã giảm giá</h6>
+                                    <form action="/cart/voucher" class="coupon-form" method="post">
+                                        <input type="text" placeholder="Nhập mã " name="voucher" value="${valueVoucher }">
+                                        <button type="submit" class="site-btn coupon-btn">Sử
+                                            Dụng</button>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 offset-lg-4">
+                                <div class="proceed-checkout">
+                                    <ul>
+                                        <li class="subtotal">Tổng tiền <span><fmt:formatNumber
+                                                    value="${total }" type="currency" currencyCode="VND" /></span></li>
+                                        <c:choose>
+                                            <c:when test="${not empty sessionScope.keyVoucher}">
+                                                <li class="subtotal">Voucher Giảm ${ sessionScope.keyVoucher.discount}
+                                                    % <span><fmt:formatNumber value="${discount }"
+                                                            type="currency" currencyCode="VND" /></span>
+                                                </li>
+                                            </c:when>
+                                            <c:otherwise>
+                                                <li class="subtotal">Voucher <span> Chưa có
+                                                        </span>
+                                                </li>
+                                            </c:otherwise>
+                                        </c:choose>
+                                        <li class="cart-total">Tổng Tiền Phải Trả <span><fmt:formatNumber
+                                                    value="${totalProduct }" type="currency"
+                                                    currencyCode="VND" /></span></li>
+                                    </ul>
+                                    <a href="/bill/view" class="btn-hd-w" style="width: 50%; text-align: center;">XUẤT HÓA ĐƠN</a>
+                                </div>
+                            </div>
+                        </div>
+                    </c:when>
+                </c:choose>
+            </div>
+    </div>
+    <footer>
+
+        <div class="card  text-center" >
+            <div class="row" style="background-color: black;">
+                <div class="card-body col-sm-6" >
+                    <h6 class="card-title footer-help"><i>LIÊN HỆ:</i></h6>
+                    <p class="card-text footer-help"><i>Email: nikestore@gmail.com</i></p>
+                    <i class="footer-help">Hotline: 090 909 0909</i>
+                </div>
+                <div class="card-body col-sm-6">
+                    <a class="footer-help" href="">
+                        <h5>GET HELP</h5>
+                    </a>
+                    <a class="footer-help" href="">
+                        <p>Order Status</p>
+                    </a>
+                    <a class="footer-help" href="">
+                        <p>Delivery</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
